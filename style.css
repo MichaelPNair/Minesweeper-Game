@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: mistyrose;
+}
+
+h1,h2 {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+label {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.inputs {
+    margin: 1% 0 1% 0;
+    text-align: left;
+}
+
+.page-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 1% 0 1% 0;
+}
+
+span {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.grid-wrapper {
+    display: flex;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.box {
+    background-color: lightskyblue;
+    border: 1px solid black;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+    justify-content: center;
+
+}
+
+.show0 {
+    color: darkgray;
+}
+
+.show1 {
+    color: blue;
+}
+
+.show2 {
+    color: green;
+}
+
+.show3 {
+    color: red
+}
+
+.show4 {
+    color: darkmagenta
+}
+
+.show5 {
+    color: brown
+}
+
+.show6 {
+    color: cyan
+}
+
+.show7 {
+    color: black
+}
+
+.show8 {
+    color: darkorange
+}
+
+
+.showBox {
+    background-color: gainsboro;
+    font-size: 100%;
+}
+
+.bomb {
+    background-color: crimson;
+}
+
+
+.hideBox {
+    background-color: lightskyblue;
+}
+
+.mouseover {
+    background-color: darkslategray;
+}
+
+.bombVictory {
+    background-color: purple;
+}
+
+.hideText {
+    visibility: hidden;
+}
+
+.bombText {
+    visibility: hidden;
+}
