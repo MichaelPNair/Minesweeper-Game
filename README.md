@@ -16,7 +16,7 @@ Avoid the mines by using the numbers revealed by your clicks. For example, a '5'
 
 If you click on a '0' square, it will automatically reveal the squares around it, so get those tiles early if you can!
 
-You win if you click on all of the numbers while avoiding all of the mines. Good luck!
+You win if you reveal all of the numbers while avoiding all of the mines. Good luck!
 
 ## Screenshots
 ![Screenshot of fresh page with no grid generated.](/screenshots/Screenshot1.png)
