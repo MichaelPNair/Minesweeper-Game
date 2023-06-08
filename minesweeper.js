@@ -63,6 +63,7 @@ function handleNewGame() {
             newBoxEl.addEventListener('mouseover',handleBoxMouseOver);
             newBoxEl.addEventListener('mouseout',handleBoxMouseOut);
             newBoxEl.addEventListener('click',handleFirstBoxClick);
+            newBoxEl.addEventListener('contextmenu',handleBoxRightClick, false);
             newBoxEl.dataset.Row = i;
             newBoxEl.dataset.Column = j;
 
@@ -223,6 +224,7 @@ function handleFirstBoxClick(event){
                 if(Number(box.dataset.Row) === floodCoordinate[0] && Number(box.dataset.Column) === floodCoordinate[1]){
                     box.removeEventListener('mouseover',handleBoxMouseOver);
                     box.removeEventListener('mouseout',handleBoxMouseOut);
+                    box.removeEventListener('contextmenu',handleBoxRightClick);
                     if(box.classList.contains('mouseover')){
                         box.classList.remove('mouseover');
                     }
@@ -231,6 +233,9 @@ function handleFirstBoxClick(event){
                     }
                     if(!box.classList.contains('showBox')){
                         box.classList.add('showBox');
+                    }
+                    if(box.classList.contains('flag')){
+                        box.classList.remove('flag');
                     }
                     if(box.querySelector('span').classList.contains('hideText')){
                         box.querySelector('span').classList.remove('hideText');
@@ -251,6 +256,9 @@ function handleFirstBoxClick(event){
         if(!event.target.classList.contains('showBox')){
             event.target.classList.add('showBox');
         }
+        if(event.target.classList.contains('flag')){
+            event.target.classList.remove('flag');
+        }
         if(event.target.querySelector('span').classList.contains('hideText')){
             event.target.querySelector('span').classList.remove('hideText');
         } 
@@ -259,7 +267,6 @@ function handleFirstBoxClick(event){
     // revealBox(event,clickedRow,clickedColumn);
 
     // remove handleFirstBoxClick on all boxes and add handleBoxClick
-
     for (box of allBoxes){
         box.removeEventListener('click',handleFirstBoxClick);
         if((Number(box.dataset.Row)===clickedRow && Number(box.dataset.Column)=== clickedColumn )===false){
@@ -272,6 +279,7 @@ function handleFirstBoxClick(event){
         document.querySelector('.display-text').innerText = "Victory! Play again?";
         for(box of allBoxes){
             box.removeEventListener('click',handleBoxClick);
+            box.removeEventListener('contextmenu',handleBoxRightClick);
             if(box.classList.contains('bomb')){
                 box.classList.add('bombVictory');
             }
@@ -293,6 +301,7 @@ function handleBoxClick(event){
             box.removeEventListener('click',handleBoxClick);
             box.removeEventListener('mouseover',handleBoxMouseOver);
             box.removeEventListener('mouseout',handleBoxMouseOut);
+            box.removeEventListener('contextmenu',handleBoxRightClick);
             if(box.classList.contains('mouseover')){
                 box.classList.remove('mouseover');
             }
@@ -302,6 +311,9 @@ function handleBoxClick(event){
             if(!box.classList.contains('showBox')){
                 box.classList.add('showBox');
             }
+            if(box.classList.contains('flag')){
+                box.classList.remove('flag');
+            } 
             if(box.querySelector('span').classList.contains('hideText')){
                 box.querySelector('span').classList.remove('hideText');
             } 
@@ -318,6 +330,7 @@ function handleBoxClick(event){
                     box.removeEventListener('click',handleBoxClick);
                     box.removeEventListener('mouseover',handleBoxMouseOver);
                     box.removeEventListener('mouseout',handleBoxMouseOut);
+                    box.removeEventListener('contextmenu',handleBoxRightClick);
                     if(box.classList.contains('mouseover')){
                         box.classList.remove('mouseover');
                     }
@@ -329,6 +342,9 @@ function handleBoxClick(event){
                     }
                     if(box.querySelector('span').classList.contains('hideText')){
                         box.querySelector('span').classList.remove('hideText');
+                    }
+                    if(box.classList.contains('flag')){
+                        box.classList.remove('flag');
                     }  
                 }
             }
@@ -339,6 +355,7 @@ function handleBoxClick(event){
         event.target.removeEventListener('click',handleBoxClick);
         event.target.removeEventListener('mouseover',handleBoxMouseOver);
         event.target.removeEventListener('mouseout',handleBoxMouseOut);
+        event.target.removeEventListener('contextmenu',handleBoxRightClick);
         if(event.target.classList.contains('mouseover')){
             event.target.classList.remove('mouseover');
         }
@@ -348,6 +365,9 @@ function handleBoxClick(event){
         if(!event.target.classList.contains('showBox')){
             event.target.classList.add('showBox');
         }
+        if(event.target.classList.contains('flag')){
+            event.target.classList.remove('flag');
+        } 
         if(event.target.querySelector('span').classList.contains('hideText')){
             event.target.querySelector('span').classList.remove('hideText');
         } 
@@ -362,6 +382,7 @@ function handleBoxClick(event){
         document.querySelector('.display-text').innerText = "Victory! Play again?";
         for(box of allBoxes){
             box.removeEventListener('click',handleBoxClick);
+            box.removeEventListener('contextmenu',handleBoxRightClick);
             if(box.classList.contains('bomb')){
                 box.classList.add('bombVictory');
             }
@@ -485,4 +506,10 @@ function arrayContains(childArray, parentArray){
 
         return false;
     }
+}
+
+function handleBoxRightClick(event) {
+    event.preventDefault();
+    event.target.classList.toggle('flag');
+    return false;
 }

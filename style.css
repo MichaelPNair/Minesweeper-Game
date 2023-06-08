@@ -101,18 +101,26 @@ span {
     font-size: 100%;
 }
 
+
 .bomb {
     background-color: crimson;
 }
-
 
 .hideBox {
     background-color: lightskyblue;
 }
 
+
+
 .mouseover {
     background-color: darkslategray;
 }
+
+.flag {
+    
+    background-color: goldenrod;
+}
+
 
 .bombVictory {
     background-color: purple;

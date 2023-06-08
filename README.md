@@ -16,6 +16,8 @@ Avoid the mines by using the numbers revealed by your clicks. For example, a '5'
 
 If you click on a '0' square, it will automatically reveal the squares around it, so get those tiles early if you can!
 
+Use right click to mark a square to keep better track of the bombs you have already found. Don't worry, you can right click again to remove the mark or just click it if you're confident that there's no bomb.
+
 You win if you reveal all of the numbers while avoiding all of the mines. Good luck!
 
 ## Screenshots
@@ -25,13 +27,15 @@ You win if you reveal all of the numbers while avoiding all of the mines. Good l
 
 ![Screenshot of a game in progress with some squares revealed.](/screenshots/Screenshot3.png)
 
+![Screenshot of right click used to flag square.](/screenshots/ScreenshotRightClick.png)
+
 ![Screenshot of a defeat.](/screenshots/Screenshot4.png)
 
 ![Screenshot of a victory.](/screenshots/Screenshot5.png)
 
 
 ## Next Steps
-While the game is already in a good state, I am looking to add flags and question marks to mark mines that you are aware of.
+While the game is already in a good state, I am looking to add the ability to futher adjust the grid size after the grid is made.
 
 ## Link
 This is hosted on Github pages. Click [here](https://michaelpnair.github.io/Minesweeper-Game/) to get to the page.
