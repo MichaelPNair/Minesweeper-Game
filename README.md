@@ -34,7 +34,7 @@ You win if you reveal all of the numbers while avoiding all of the mines. Good l
 While the game is already in a good state, I am looking to add flags and question marks to mark mines that you are aware of.
 
 ## Link
-This is hosted on Github pages. Click [here] (https://michaelpnair.github.io/Minesweeper-Game/) to get to the page.
+This is hosted on Github pages. Click [here](https://michaelpnair.github.io/Minesweeper-Game/) to get to the page.
 
 ## Thanks
 Designed and coded by Michael Nair.
