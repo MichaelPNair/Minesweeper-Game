@@ -17,9 +17,9 @@ document.querySelector('.newGame-btn').addEventListener('click',handleNewGame);
 
 
 function handleNewGame() {
-    numberOfMines = document.querySelector('#inputMines').valueAsNumber;
-    numberOfRows = document.querySelector('#inputRows').valueAsNumber;
-    numberOfColumns = document.querySelector('#inputColumns').valueAsNumber;
+    numberOfMines = Math.floor(document.querySelector('#inputMines').valueAsNumber);
+    numberOfRows = Math.floor(document.querySelector('#inputRows').valueAsNumber);
+    numberOfColumns = Math.floor(document.querySelector('#inputColumns').valueAsNumber);
     twoDimensionalArray = [];
 
     // delete any previous grid
@@ -208,7 +208,7 @@ function handleFirstBoxClick(event){
     // set innerText on Boxes
     for (box of allBoxes){
         if(twoDimensionalArray[Number(box.dataset.Row)][Number(box.dataset.Column)]===-1){
-            box.querySelector('span').innerText= '0';
+            box.querySelector('span').innerText= 'X';
         } else {
             box.querySelector('span').innerText= twoDimensionalArray[Number(box.dataset.Row)][Number(box.dataset.Column)];
         }
@@ -376,7 +376,7 @@ function removeGrid(){
 }
 
 //function to return list of coordinates that are part of flood
-// at each step, check up, down, left and right
+// at each step, check 8 directions
 function getFlood(Row,Column){
     let toCheckArray = [[Row,Column]];
     let outputArray = [];
