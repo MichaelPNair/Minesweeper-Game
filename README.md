@@ -1,6 +1,6 @@
 # Minesweeper Game
 
-This is a Minesweeper game done in HTML, CSS and Javascript.
+This is a Minesweeper game done in HTML, CSS and Javascript. Click [here](https://michaelpnair.github.io/Minesweeper-Game/) to get to the page.
 
 ## Technologies Used
 - HTML
@@ -21,21 +21,32 @@ Use right click to mark a square to keep better track of the bombs you have alre
 You win if you reveal all of the numbers while avoiding all of the mines. Good luck!
 
 ## Screenshots
+### Initial Screen
 ![Screenshot of fresh page with no grid generated.](/screenshots/Screenshot1.png)
 
+### New grid generated
 ![Screenshot of a new Minesweeper grid.](/screenshots/Screenshot2.png)
 
+### Some squares revealed
 ![Screenshot of a game in progress with some squares revealed.](/screenshots/Screenshot3.png)
 
+### Some flags flagged
 ![Screenshot of right click used to flag square.](/screenshots/ScreenshotRightClick.png)
 
+### Defeat
 ![Screenshot of a defeat.](/screenshots/Screenshot4.png)
 
+### Victory
 ![Screenshot of a victory.](/screenshots/Screenshot5.png)
 
 
-## Next Steps
-While the game is already in a good state, I am looking to add the ability to futher adjust the grid size after the grid is made.
+## Future Improvement
+- Ability to futher adjust the grid size after the grid is made.
+- Add animations and sounds.
+- Add themes.
+- Add a bomb image.
+- Change logic of right click event listener to allow for disabling right click on revealed squares.
+- Don’t immediately show bomb when using inspect element
 
 ## Link
 This is hosted on Github pages. Click [here](https://michaelpnair.github.io/Minesweeper-Game/) to get to the page.

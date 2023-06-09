@@ -42,9 +42,9 @@ function handleNewGame() {
     for(let i = 0; i<numberOfRows; i++){
 
     let rowArray = [];
-    for (let j = 0; j<numberOfColumns; j++){
-        rowArray.push(0);
-    }
+        for (let j = 0; j<numberOfColumns; j++){
+            rowArray.push(0);
+        }
         twoDimensionalArray.push(rowArray);
     }
 
